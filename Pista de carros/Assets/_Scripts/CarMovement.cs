@@ -41,7 +41,7 @@ public class CarMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
 
         // Cambia el centro de gravedad del carro
-        _rb.centerOfMass = new Vector3(0, -0.5f, 0);
+        _rb.centerOfMass = new Vector3(0, -1f, 0);
 
         // Guarda la velocidad inicial
         speed = car.speed;
@@ -129,13 +129,23 @@ public class CarMovement : MonoBehaviour
     }
     public System.Collections.IEnumerator ActivateBoost(float multiplier, float duration)
     {
-        // Multiplicamos la velocidad actual tomando como base la del Scriptable Object
+        // 1. Aumentamos la fuerza del motor
         speed = car.speed * multiplier;
         
-        // El código "pausa" esta función durante los segundos indicados
+        // 2. Si es un Boost (multiplicador mayor a 1), le damos un empujón físico instantáneo
+        if (multiplier > 1f)
+        {
+            // Fuerza de impulso hacia adelante. Puedes ajustar el número 50000 según el peso de tu carro
+            _rb.AddForce(transform.forward * 50000f, ForceMode.Impulse);
+        }
+        // 3. Si es lentitud (multiplicador menor a 1), frenamos el carro reduciendo su velocidad física
+        else if (multiplier < 1f)
+        {
+            _rb.velocity = _rb.velocity * 0.3f; // Corta la inercia de golpe
+        }
+        
         yield return new WaitForSeconds(duration);
         
-        // Devolvemos la velocidad a su valor normal original
         speed = car.speed;
     }
     public System.Collections.IEnumerator ActivateTrap(float speedMultiplier, float duration)
