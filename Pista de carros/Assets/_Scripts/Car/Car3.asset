@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51378198bfd0fd4478d3896ec1438c05, type: 3}
+  m_Name: Car3
+  m_EditorClassIdentifier: 
+  speed: 700
+  brakeForce: 650
+  angle: 20
+  carImage: {fileID: 21300000, guid: b66acda4257d3294d8f10bdcb1038e74, type: 3}
+  carName: El Afanes
+  carPrefab: {fileID: 0}
