@@ -28,7 +28,12 @@ public class CheckpointManager : MonoBehaviour
                     {
                         Debug.Log("¡Checkpoint " + i + " válido!");
                         nextCheckpointIndex++; // Ahora debe buscar el siguiente
-
+                        FallDetector detector = GetComponent<FallDetector>();
+                        if (detector != null)
+                        {
+                            detector.ultimaPosicionCheckpoint = checkpoints[i].position;
+                            detector.ultimaRotacionCheckpoint = checkpoints[i].rotation;
+                        }
                         // Si el índice supera la cantidad de checkpoints, ¡completó la vuelta!
                         if (nextCheckpointIndex >= checkpoints.Length)
                         {
@@ -48,7 +53,6 @@ public class CheckpointManager : MonoBehaviour
                     {
                         Debug.Log("¡Hey! Te saltaste un checkpoint, devuélvete.");
                     }
-                    
                     break; // Salimos del ciclo for porque ya encontramos el checkpoint
                 }
             }

@@ -749,6 +749,7 @@ GameObject:
   - component: {fileID: 6123736826984969527}
   - component: {fileID: 2755331260170986036}
   - component: {fileID: 4820227452880827698}
+  - component: {fileID: 7197754739248538282}
   m_Layer: 0
   m_Name: Carro3
   m_TagString: Player
@@ -930,6 +931,21 @@ MonoBehaviour:
   ruedaIzquierda: {fileID: 6652960622963422191}
   ruedaDerecha: {fileID: 2845602589876899682}
   fuerzaAntiVuelco: 10000
+--- !u!114 &7197754739248538282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4769358150434139666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5658d6dd04cdbd4380bd898eaabac0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alturaMinima: -20
+  ultimaPosicionCheckpoint: {x: 0, y: 0, z: 0}
+  ultimaRotacionCheckpoint: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5925676533210395492
 GameObject:
   m_ObjectHideFlags: 0

@@ -963,6 +963,7 @@ GameObject:
   - component: {fileID: 5780920111963972817}
   - component: {fileID: 7582319161915044283}
   - component: {fileID: 4905183860063969860}
+  - component: {fileID: 6956583368657796273}
   m_Layer: 0
   m_Name: Carro2
   m_TagString: Player
@@ -1144,6 +1145,21 @@ MonoBehaviour:
   ruedaIzquierda: {fileID: 5033780034534193050}
   ruedaDerecha: {fileID: 8093393704650045423}
   fuerzaAntiVuelco: 10000
+--- !u!114 &6956583368657796273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5655990894392435301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5658d6dd04cdbd4380bd898eaabac0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alturaMinima: -20
+  ultimaPosicionCheckpoint: {x: 0, y: 0, z: 0}
+  ultimaRotacionCheckpoint: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6495304884944129797
 GameObject:
   m_ObjectHideFlags: 0

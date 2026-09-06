@@ -1153,6 +1153,7 @@ GameObject:
   - component: {fileID: 6722032118909310131}
   - component: {fileID: 8720777332061950121}
   - component: {fileID: 8372057426284902757}
+  - component: {fileID: 3242367567138951770}
   m_Layer: 0
   m_Name: Carro1
   m_TagString: Player
@@ -1334,6 +1335,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntajeTotal: 0
   textoPuntaje: {fileID: 0}
+--- !u!114 &3242367567138951770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821511852722278621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5658d6dd04cdbd4380bd898eaabac0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alturaMinima: -20
+  ultimaPosicionCheckpoint: {x: 0, y: 0, z: 0}
+  ultimaRotacionCheckpoint: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8953704120289541071
 GameObject:
   m_ObjectHideFlags: 0
